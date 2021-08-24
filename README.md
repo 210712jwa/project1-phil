@@ -1,1 +1,10 @@
 # Project-1
+## Technologies
+* Java
+* JavaScript
+* HTML
+* CSS
+* Hibernate 
+* Maven
+* Javalin 
+* JDBC
