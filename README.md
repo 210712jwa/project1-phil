@@ -1,10 +1,13 @@
 # Project-1
 ## Technologies
-* Java
 * JavaScript
 * HTML
-* CSS
+* CSS 
+* AJAX 
+* SQL 
 * Hibernate 
-* Maven
+* Java 
+* Selenium 
 * Javalin 
-* JDBC
+* Mockito 
+* JUnit
