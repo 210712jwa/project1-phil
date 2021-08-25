@@ -3,7 +3,7 @@
 * JavaScript
 * HTML
 * CSS 
-* AJAX 
+* Fetch  
 * SQL 
 * Hibernate 
 * Java 
