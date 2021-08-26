@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Reimbursements Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+           h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Reimbursements Page</h1>
+    <div class="container">
+        <form id ="reimbursementform">
+      
+            <div class="form-group">
+                <label for="reimbursementdesc">Reimbursement Description:</label>
+                <input class="form-control" type="text" name="reimbursementdesc" id="reimbursementdesc">
+            </div>
+            <div class="form-group">
+                <label for="reimbursementamt">Reimbursement Amount:</label> 
+                <input class="form-control" type="text" name="reimbursementamt" id="reimbursementamt">
+            </div>
+            <div class="form-group">
+                <label for="reimbursementtype">Reimbursement Type:</label> 
+                <input class="form-control" type="text" name="reimbursementtype" id="reimbursementtype">
+            </div>
+            
+                <button class="btn btn-primary mt-5" id = "submit">Submit</button>
+            
+        </form>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="js/addreimb.js"></script>
+    </div>
+</body>
+</html>
