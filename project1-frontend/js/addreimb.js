@@ -3,6 +3,7 @@ let amountInput = document.getElementById('reimbursementamt');
 let typeInput = document.getElementById('reimbursementtype');
 let submitButton = document.getElementById('submit');
 
+
 function submit(event) {
     event.preventDefault();
     alert("I am here");
@@ -46,5 +47,6 @@ function submit(event) {
 
 
 };
+
 
 submitButton.addEventListener('click', submit);

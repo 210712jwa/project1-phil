@@ -38,7 +38,7 @@ function populateReimbs(reimbArray){
         reimbIdTd.innerHTML = reimb.id;
 
         let reimbAmountTd = document.createElement('td');
-        reimbAmountTd.innerHTML = reimb.amount;
+        reimbAmountTd.innerHTML = "$"+ reimb.amount;
 
         let reimbDescriptionTd = document.createElement('td');
         reimbDescriptionTd.innerHTML = reimb.description;

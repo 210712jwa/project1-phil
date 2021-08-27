@@ -22,7 +22,7 @@ function login(event) {
       
     }).then((response) => {
         if (response.status === 200) {
-            window.location.href = '/viewreimb.html';
+            return response.json()         
 
         } else if (response.status === 400) {
             displayInvalidLogin();
@@ -30,7 +30,12 @@ function login(event) {
 
         }
 
-
+    }).then((user) =>{
+        if(user.userRole.id == 1){
+            window.location.href = '/managerviewreimb.html'
+        }else{
+            window.location.href = '/viewreimb.html'
+        }
     })
 
 
