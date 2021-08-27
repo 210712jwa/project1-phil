@@ -70,7 +70,7 @@ public class ReimbursementDAO {
 		return reimbursements;
 	}
 
-	public Reimbursement editReimbursement(int userId, int reimbId, EditReimbursementDTO reimbursement) {
+	public Reimbursement editReimbursement( int reimbId, EditReimbursementDTO reimbursement) {
 		Date date = new Date();
 		Timestamp resolved = new Timestamp(date.getTime());
 		
@@ -79,7 +79,6 @@ public class ReimbursementDAO {
 		Transaction tx = session.beginTransaction();
 		
 		Reimbursement reimbursementToEdit = session.get(Reimbursement.class, reimbId);
-		reimbursementToEdit.setResolver(session.get(User.class, userId));
 		reimbursementToEdit.setStatus(session.get(ReimbursementStatus.class, reimbursement.getStatus()));
 		reimbursementToEdit.setResolved(resolved);
 		session.saveOrUpdate(reimbursementToEdit);

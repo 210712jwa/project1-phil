@@ -43,11 +43,11 @@ public class ReimbursementService {
 	}
 
 
-	public Reimbursement editReimbursement(String userIdString, String reimbIdString, EditReimbursementDTO reimbursementToEdit) {
-		int userId = Integer.parseInt(userIdString);
+	public Reimbursement editReimbursement(String reimbIdString, EditReimbursementDTO reimbursementToEdit) {
+
 		int reimbId = Integer.parseInt(reimbIdString);
 		
-		Reimbursement editedReimbursement = reimbursementDao.editReimbursement(userId, reimbId, reimbursementToEdit);
+		Reimbursement editedReimbursement = reimbursementDao.editReimbursement(reimbId, reimbursementToEdit);
 		
 		return editedReimbursement;
 	}

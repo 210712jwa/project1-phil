@@ -28,7 +28,7 @@ public class ManagerActionsController implements Controller {
 		authService.guard(ctx);
 		
 		User currentUser = (User) session.getAttribute("currentUser");
-		String userId = ctx.pathParam("userid");
+	
 		String status = ctx.pathParam("status");
 		
 		List<Reimbursement> reimbursements = ReimbursementService.getAllReimbursementsFromStatus(status);
@@ -39,18 +39,18 @@ public class ManagerActionsController implements Controller {
 		HttpSession session = ctx.req.getSession();
 		authService.guard(ctx);
 		
-		String userId = ctx.pathParam("userid");
+		
 		String reimbId = ctx.pathParam("reimbid");
 		
 		EditReimbursementDTO reimbursementToEdit = ctx.bodyAsClass(EditReimbursementDTO.class);
-		Reimbursement editedReimbursement = ReimbursementService.editReimbursement(userId, reimbId, reimbursementToEdit);
+		Reimbursement editedReimbursement = ReimbursementService.editReimbursement(reimbId, reimbursementToEdit);
 		ctx.json(editedReimbursement);
 	};
 	private Handler getAllRequests = (ctx) -> {
 		HttpSession session = ctx.req.getSession();
 		authService.guard(ctx);
 		
-		String userId = ctx.pathParam("userid");
+	
 		
 		List<Reimbursement> reimbursements = ReimbursementService.getAllReimbursements();
 		
@@ -61,9 +61,9 @@ public class ManagerActionsController implements Controller {
 	@Override
 	public void mapEndpoints(Javalin app) {
 		
-		app.get("/user/:userid/getallrequests", getAllRequests );
-		app.get("/user/:userid/filterrequestbystatus/:status", filterRequestByStatus);
-		app.put("/user/:userid/processrequest/:reimbid", processRequest);
+		app.get("/getallrequests", getAllRequests );
+		app.get("/filterrequestbystatus/:status", filterRequestByStatus);
+		app.put("/processrequest/:reimbid", processRequest);
 	
 		
 	}
